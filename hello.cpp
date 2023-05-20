@@ -5,16 +5,16 @@ using namespace std;
 class graph{
     unordered_map<int , list<int>> adj;
 
-     void addAdj(int u,int v,bool dir){
+     int addAdj(int u, int v ,bool dir){
         adj[u].push_back(v);
         if(dir==0){
             adj[v].push_back(u);
         }
-        return;
+        return 0;
      }
 
      //now how to print adj list
-     void printAdj(){
+     int printAdj(){
         for(auto i: adj){
             cout<<i.first<<"->";
             for(auto j: i.second){
@@ -22,7 +22,7 @@ class graph{
             }
             cout<<endl;
         }
-        return;
+        return 0;
      }
 };
 
